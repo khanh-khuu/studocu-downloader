@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Studocu Downloader - Free Premium Bypass",
+  "version": "1.0.0",
+  "description": "Bypass premium restrictions, unblur document pages, and download documents as PDF on Studocu & Studeersnel.",
+  "host_permissions": [
+    "https://doc-assets.studocu.com/*"
+  ],
+  "content_scripts": [
+    {
+      "js": [
+        "update-inter.js",
+        "view-doc.js",
+        "remove-previewBanner.js"
+      ],
+      "css": [
+        "style.css"
+      ],
+      "matches": [
+        "https://www.studocu.com/*",
+        "https://*.studocu.com/*",
+        "https://www.studeersnel.nl/*",
+        "https://*.studeersnel.nl/*",
+        "https://www.studocu.vn/*",
+        "https://*.studocu.vn/*"
+      ],
+      "run_at": "document_start"
+    }
+  ]
+}
